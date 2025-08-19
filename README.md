@@ -18,3 +18,9 @@ This project focuses on building a robust, scalable, and secure backend using Dj
 - **Deployment:** Docker, Gunicorn, Nginx  
 - **CI/CD:** GitHub Actions  
 - **Optional:** GraphQL for advanced API queries
+
+## Team Roles
+- **Backend Developer:** responsible for implementing the API endpoints, database schemas, and business logic
+- **Database Administrator:** manages the database design, indexing & optimisation
+- **DevOps Engineer:** handles the deployment, monitoring, and scaling of digital services
+- **QA Engineer:** ensures the backend functionalities are thoroughyly tested and meets the quality standards
