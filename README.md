@@ -50,7 +50,6 @@ The Airbnb Clone backend relies on a relational database to manage users, proper
 - A user can be a guest making multiple bookings.
 - A user can leave multiple reviews.
 
----
 
 ### 2. Properties
 **Fields:**
@@ -66,8 +65,6 @@ The Airbnb Clone backend relies on a relational database to manage users, proper
 - A property can have multiple bookings.
 - A property can have multiple reviews.
 
----
-
 ### 3. Bookings
 **Fields:**
 - `id` (Primary Key)
@@ -80,8 +77,6 @@ The Airbnb Clone backend relies on a relational database to manage users, proper
 **Relationships:**
 - Each booking belongs to one guest.
 - Each booking is for one property.
-
----
 
 ### 4. Reviews
 **Fields:**
@@ -96,8 +91,6 @@ The Airbnb Clone backend relies on a relational database to manage users, proper
 - Each review is written by one guest.
 - Each review belongs to one property.
 
----
-
 ### 5. Payments
 **Fields:**
 - `id` (Primary Key)
@@ -110,8 +103,6 @@ The Airbnb Clone backend relies on a relational database to manage users, proper
 - Each payment is linked to one booking.
 - A booking can have one or multiple payment attempts.
 
----
-
 ### **Entity Relationships Overview**
 - **User → Property**: One-to-Many (host can have multiple properties).  
 - **User → Booking**: One-to-Many (guest can have multiple bookings).  
@@ -119,4 +110,29 @@ The Airbnb Clone backend relies on a relational database to manage users, proper
 - **Property → Review**: One-to-Many (property can have multiple reviews).  
 - **Booking → Payment**: One-to-Many (a booking can have multiple payments).  
 - **User → Review**: One-to-Many (guest can leave multiple reviews).
+
+## Feature Breakdown
+
+### 1. User Management
+
+Users can register, log in, and manage their profiles. This feature ensures that both guests and hosts have secure, personalized accounts, enabling smooth authentication and authorization across the platform.
+
+### 2. Property Management
+
+Develop features for Hosts to list their properties with details such as title, description, location, price per night, and availability. This feature provides the core functionality for making properties discoverable to potential guests.
+
+### 3. Booking System
+
+Create a booking mechanism for users to search for available properties and make bookings for specific dates. This feature manages reservation conflicts, tracks booking statuses, and ensures guests and hosts have reliable scheduling.
+
+### 4. Reviews & Ratings
+
+Guests can leave reviews and ratings for properties they’ve stayed at. This feature builds trust within the platform by helping future guests make informed decisions based on previous experiences.
+
+### 5. Payment Processing
+
+Guests can securely pay for their bookings through the platform. This feature integrates payment workflows, ensuring transactions are tracked and linked to bookings, providing transparency and reliability.
+
+### 6. Data Optimisation
+The feature ensures that there is an efficient data retrieval and storage through database optimisation.
 
