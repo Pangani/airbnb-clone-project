@@ -1,0 +1,20 @@
+# Airbnb Clone Project
+
+## Project Overview
+The **Airbnb Clone Backend** is a real-world simulation of a booking platform similar to Airbnb.  
+This project focuses on building a robust, scalable, and secure backend using Django and Django REST Framework (DRF), providing hands-on experience in API development, database design, authentication, and deployment workflows.
+
+## Project Goals
+- Build a backend API that handles user authentication, property listings, bookings, payments, and reviews.
+- Implement a secure and efficient JWT authentication system.
+- Design a relational database schema that supports bookings, availability checks, and user roles (guest/host).
+- Prepare the project for deployment using Docker and integrate a basic CI/CD pipeline.
+- Develop professional skills in documentation, testing, and collaborative workflows using Git and GitHub.
+
+## Tech Stack
+- **Backend Framework:** Django + Django REST Framework (DRF)  
+- **Database:** PostgreSQL / MySQL  
+- **Authentication:** JWT (via `djangorestframework-simplejwt`)  
+- **Deployment:** Docker, Gunicorn, Nginx  
+- **CI/CD:** GitHub Actions  
+- **Optional:** GraphQL for advanced API queries
