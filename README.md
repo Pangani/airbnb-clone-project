@@ -136,3 +136,53 @@ Guests can securely pay for their bookings through the platform. This feature in
 ### 6. Data Optimisation
 The feature ensures that there is an efficient data retrieval and storage through database optimisation.
 
+## API Security
+
+Ensuring strong security practices is critical for the Airbnb Clone project since the backend APIs handle sensitive information such as user credentials, booking details, and payment transactions. The following key security measures will be implemented:
+
+### 1. Authentication
+
+We will use secure authentication mechanisms (e.g., JWT or OAuth2) to verify the identity of users before granting access to the system. This ensures that only legitimate users can access protected resources.
+
+**Why it matters:** Prevents unauthorized access to user accounts, protecting personal data and maintaining trust.
+
+### 2. Authorization
+
+Role-based access control will be applied to distinguish between guests, hosts, and administrators. Each role will have specific permissions to ensure that users can only perform actions allowed to them.
+
+**Why it matters:** Prevents users from performing restricted operations, such as one guest modifying another guest’s bookings.
+
+### 3. Rate Limiting
+
+API rate limiting will be implemented to control the number of requests a client can make in a given timeframe. This measure helps protect against brute-force attacks and abuse of the system.
+
+**Why it matters:** Ensures stability of the application, prevents denial-of-service attacks, and protects backend resources.
+
+### 4. Data Encryption
+
+Sensitive information, such as passwords and payment details, will be encrypted both in transit (via HTTPS) and at rest (using strong encryption algorithms).
+
+**Why it matters:** Protects confidential user data and prevents interception or exposure of sensitive information.
+
+### 5. Input Validation & Sanitization
+
+All API inputs will be validated and sanitized to prevent common attacks such as SQL injection, cross-site scripting (XSS), and request forgery.
+
+**Why it matters:** Prevents malicious users from exploiting the system through poorly validated inputs, ensuring the integrity of the application.
+
+## CI/CD Pipeline
+
+Continuous Integration (CI) and Continuous Deployment (CD) pipelines will be used such that (for CI) every change to the codebase is automatically tested and validated, reducing the chances of bugs being introduced. CD automates the deployment process, ensuring that updates are delivered to production environments reliably and efficiently.
+
+For this project, the CI/CD pipeline will help us:
+- Automate testing to maintain code quality and stability.
+- Deploy new features faster without compromising reliability.
+- Ensure a consistent development workflow across the team.
+
+**Tools we may use:**
+- **GitHub Actions**: For automating builds, testing, and deployments directly from GitHub.
+- **Ansible**: for managing configurations, deployments, and orchestration, using playbooks. 
+- **Docker**: To ensure a consistent environment across development, testing, and production.
+- **AWS or Heroku**: For hosting and deploying the application.
+
+
