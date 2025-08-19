@@ -34,3 +34,89 @@ This project focuses on building a robust, scalable, and secure backend using Dj
 - **Redis:** Used for caching and session management.
 - **Docker:** Containerization tool for consistent development and deployment environments.
 - **CI/CD Pipelines:** Automated pipelines for testing and deploying code changes.
+
+## Database Design
+The Airbnb Clone backend relies on a relational database to manage users, properties, bookings, reviews, and payments. Below are the key entities and their relationships:
+
+### 1. Users
+**Fields:**
+- `id` (Primary Key)
+- `username`
+- `email`
+- `is_host` (boolean)
+
+**Relationships:**
+- A user can be a host with multiple properties.
+- A user can be a guest making multiple bookings.
+- A user can leave multiple reviews.
+
+---
+
+### 2. Properties
+**Fields:**
+- `id` (Primary Key)
+- `title`
+- `description`
+- `location` (city, country)
+- `price_per_night`
+- `host_id` (Foreign Key → Users)
+
+**Relationships:**
+- Each property belongs to one host.
+- A property can have multiple bookings.
+- A property can have multiple reviews.
+
+---
+
+### 3. Bookings
+**Fields:**
+- `id` (Primary Key)
+- `user_id` (Foreign Key → Users)
+- `property_id` (Foreign Key → Properties)
+- `start_date`
+- `end_date`
+- `status` (confirmed, cancelled, pending)
+
+**Relationships:**
+- Each booking belongs to one guest.
+- Each booking is for one property.
+
+---
+
+### 4. Reviews
+**Fields:**
+- `id` (Primary Key)
+- `user_id` (Foreign Key → Users)
+- `property_id` (Foreign Key → Properties)
+- `rating` (1–5)
+- `comment`
+- `created_at`
+
+**Relationships:**
+- Each review is written by one guest.
+- Each review belongs to one property.
+
+---
+
+### 5. Payments
+**Fields:**
+- `id` (Primary Key)
+- `booking_id` (Foreign Key → Bookings)
+- `amount`
+- `payment_date`
+- `status` (completed, failed, pending)
+
+**Relationships:**
+- Each payment is linked to one booking.
+- A booking can have one or multiple payment attempts.
+
+---
+
+### **Entity Relationships Overview**
+- **User → Property**: One-to-Many (host can have multiple properties).  
+- **User → Booking**: One-to-Many (guest can have multiple bookings).  
+- **Property → Booking**: One-to-Many (property can have multiple bookings).  
+- **Property → Review**: One-to-Many (property can have multiple reviews).  
+- **Booking → Payment**: One-to-Many (a booking can have multiple payments).  
+- **User → Review**: One-to-Many (guest can leave multiple reviews).
+
